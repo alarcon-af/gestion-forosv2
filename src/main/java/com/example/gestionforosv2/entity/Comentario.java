@@ -20,7 +20,7 @@ public class Comentario {
     private Integer id_com;
 
     @Column(name = "id_comentador", length = 255)
-    private Integer id_comentador;
+    private String id_comentador;
 
     @JoinColumn(name = "id_post", referencedColumnName = "id_post")
     private Integer id_post;

@@ -20,7 +20,7 @@ public class Post {
     private Integer id_post;
 
     @Column(name = "id_op", length = 255)
-    private Integer id_op;
+    private String id_op;
 
     @JoinColumn(name = "etiqueta", referencedColumnName = "id_categoria")
     private Integer etiqueta;
