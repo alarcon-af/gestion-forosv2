@@ -39,6 +39,16 @@ public class PostController {
         }
     }
 
+    @GetMapping("/lista-posts/texto/{texto}")
+    public ResponseEntity<List<Post>> getPostsTexto(@PathVariable String texto){
+        List<Post> posts = service.findTitulo(texto);
+        if(!posts.isEmpty()){
+            return new ResponseEntity<>(posts, HttpStatus.OK);
+        }else{
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
+    }
+
     @GetMapping("/{id}")
     public ResponseEntity<Post> conseguirPost(@PathVariable Integer id) {
         Optional<Post> post = service.findById(id);

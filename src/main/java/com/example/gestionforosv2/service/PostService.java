@@ -24,10 +24,13 @@ public class PostService {
         return postRepository.findByEtiqueta(cat);
     }
 
-
     public Optional<Post> findById(Integer id){
         Optional<Post> post = postRepository.findById(id);
         return post;
+    }
+
+    public List<Post> findTitulo(String texto){
+        return postRepository.findTexto(texto);
     }
 
     public Optional<Post> save(Post post){
