@@ -27,9 +27,9 @@ public class FeedbackController {
         }
     }
 
-    @GetMapping("/receptor/{id}")
-    public ResponseEntity<List<Feedback>> getFeedRec(@PathVariable String cat) {
-        List<Feedback> feeds = service.findSameRec(cat);
+    @GetMapping("/receptor/{receptor}")
+    public ResponseEntity<List<Feedback>> getFeedRec(@PathVariable String receptor) {
+        List<Feedback> feeds = service.findSameRec(receptor);
         if(!feeds.isEmpty()){
             return new ResponseEntity<>(feeds, HttpStatus.OK);
         }else{

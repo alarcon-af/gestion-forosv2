@@ -16,8 +16,8 @@ public class FeedbackService {
 
     public List<Feedback> findAll(){ return repo.findAll(); }
 
-    public List<Feedback> findSameRec(String id){
-        return repo.findByReceptor(id);
+    public List<Feedback> findSameRec(String receptor){
+        return repo.findByReceptor(receptor);
     }
 
     public Optional<Feedback> findById(Integer id){
