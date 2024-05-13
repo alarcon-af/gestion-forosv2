@@ -9,6 +9,6 @@ import java.util.List;
 public interface PostRepo extends JpaRepository<Post, Integer>{
     List<Post> findByEtiqueta(Integer etiqueta);
 
-    @Query("SELECT c FROM Post c WHERE c.titulo LIKE %:texto%")
+    @Query("SELECT p FROM Post p WHERE p.titulo LIKE %:texto% OR p.tags LIKE %:texto%")
     List<Post> findTexto(String texto);
 }

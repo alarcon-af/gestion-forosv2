@@ -11,9 +11,8 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("/feedback")
+@RequestMapping("")
 public class FeedbackController {
-
     @Autowired
     private FeedbackService service;
 

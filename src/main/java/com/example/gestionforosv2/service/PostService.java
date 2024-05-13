@@ -74,7 +74,9 @@ public class PostService {
             if(publicacion.getNombre() != null){
                 post.setNombre(publicacion.getNombre());
             }
-
+            if(publicacion.getTags() != null){
+                post.setTags(publicacion.getTags());
+            }
             postRepository.save(post);
             return post;
         }else{

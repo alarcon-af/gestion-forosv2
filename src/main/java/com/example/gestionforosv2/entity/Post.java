@@ -45,4 +45,7 @@ public class Post {
 
     @Column(name = "nombre")
     private String nombre;
+
+    @Column(name = "tags", length = 255)
+    private String tags;
 }
