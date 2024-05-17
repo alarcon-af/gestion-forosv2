@@ -56,6 +56,9 @@ public class ComentarioService {
             if(comentario.getValoracion() != null){
                 com.setValoracion(comentario.getValoracion());
             }
+            if(comentario.getMaterial() != null){
+                com.setMaterial(comentario.getMaterial());
+            }
             comRepository.save(com);
             return com;
         }else{

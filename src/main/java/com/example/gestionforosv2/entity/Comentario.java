@@ -36,4 +36,7 @@ public class Comentario {
 
     @Column(name = "fecha", length = 255)
     private Date fecha;
+
+    @Column(name = "material", length = 255)
+    private String material;
 }
